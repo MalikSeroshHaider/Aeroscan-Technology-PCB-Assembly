@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logo-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#dddddd" />
+    </linearGradient>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bg-gradient)" />
+  
+  <g fill="none" stroke="url(#logo-glow)" stroke-linecap="round">
+    <!-- Signal Arcs Left -->
+    <path d="M 125,75 A 70,70 0 0,0 125,185" stroke-width="6" opacity="0.3" />
+    <path d="M 110,60 A 90,90 0 0,0 110,200" stroke-width="6" opacity="0.6" />
+    <path d="M 95,45 A 110,110 0 0,0 95,215" stroke-width="6" />
+
+    <!-- Signal Arcs Right -->
+    <path d="M 275,75 A 70,70 0 0,1 275,185" stroke-width="6" opacity="0.3" />
+    <path d="M 290,60 A 90,90 0 0,1 290,200" stroke-width="6" opacity="0.6" />
+    <path d="M 305,45 A 110,110 0 0,1 305,215" stroke-width="6" />
+  </g>
+
+  <!-- Central Stylized A with Arrow -->
+  <path d="M 200,40 L 150,180 L 175,180 L 200,90 L 225,180 L 250,180 Z" fill="url(#logo-glow)" />
+  <path d="M 160,150 L 260,115 L 255,105 L 285,110 L 270,135 L 265,125 L 160,158 Z" fill="url(#logo-glow)" />
+
+  <!-- Typography -->
+  <text x="200" y="235" font-family="'Inter', 'Outfit', 'Helvetica Neue', sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="0.25em" text-anchor="middle">AEROSCAN</text>
+  <text x="200" y="270" font-family="'Inter', 'Outfit', 'Helvetica Neue', sans-serif" font-size="20" font-weight="500" fill="#94a3b8" letter-spacing="0.08em" text-anchor="middle">Technologies</text>
+</svg>

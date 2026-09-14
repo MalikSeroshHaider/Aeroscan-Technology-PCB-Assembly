@@ -1,0 +1,83 @@
+{
+  "id": "/",
+  "name": "Aeroscan Technologies PCB — Electronics & Manufacturing Services",
+  "short_name": "Aeroscan PCB",
+  "description": "Industry-leading PCB assembly, re-soldering, physical inspection, quality checking, functional testing, and manufacturing services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0B1120",
+  "theme_color": "#0EA5E9",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Instant Quote",
+      "short_name": "Get Quote",
+      "description": "Request a fast custom PCB or assembly quotation",
+      "url": "/contact.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Explore PCB Assembly, SMT, & Testing services",
+      "url": "/services.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Products Catalog",
+      "short_name": "Products",
+      "description": "Browse Dish TV receivers, chargers, smart fan PCBs",
+      "url": "/products.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Custom PCB",
+      "short_name": "Custom PCB",
+      "description": "Design & manufacture custom PCB circuits",
+      "url": "/custom-pcb.html",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["business", "utilities", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
