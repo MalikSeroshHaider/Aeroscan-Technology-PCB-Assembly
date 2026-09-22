@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
-import { Cpu, Layers, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Layers, Rocket, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('ALL');
@@ -55,6 +55,7 @@ export default function ServicesPage() {
 
   const smtServices = servicesData.filter(s => s.category === 'SMT');
   const dipServices = servicesData.filter(s => s.category === 'DIP');
+  const aerialServices = servicesData.filter(s => s.category === 'Aerial');
 
   const filteredServices = activeCategory === 'ALL'
     ? servicesData
@@ -66,9 +67,9 @@ export default function ServicesPage() {
       <div className="page-banner" id="services-banner">
         <div className="container page-banner__content">
           <div className="page-banner__label">Our Specialized Services</div>
-          <h1 className="page-banner__title">SMT &amp; DIP <span>PCB Assembly Services</span></h1>
+          <h1 className="page-banner__title">SMT, DIP &amp; Aerial <span>PCB Assembly Services</span></h1>
           <p className="page-banner__desc">
-            Complete Surface Mount Technology (SMT) and Dual In-line Package (DIP) Through-Hole assembly services — from high-speed pick and place to wave soldering, precision rework, 3D inspection, and packaging.
+            Complete Surface Mount Technology (SMT), Dual In-line Package (DIP) Through-Hole, and Aerial drone product assembly services — from high-speed pick and place to wave soldering, flight controller and ESC builds, and precision rework, 3D inspection, and packaging.
           </p>
         </div>
       </div>
@@ -79,14 +80,14 @@ export default function ServicesPage() {
           <div className="services-intro__inner">
             <div className="services-intro__text reveal-left">
               <div className="section-label">Automated &amp; Manual Electronics Assembly</div>
-              <h2>High-Precision SMT &amp; DIP PCB Assembly Solutions</h2>
+              <h2>High-Precision SMT, DIP &amp; Aerial Assembly Solutions</h2>
               <p>
-                At Aeroscan Technologies, we provide comprehensive SMT (Surface Mount Technology) and DIP (Through-Hole) PCB assembly services. Equipped with high-speed automated pick &amp; place machines, multi-zone convection reflow ovens, automated wave soldering tunnels, 3D AOI &amp; X-ray inspection systems, and IPC-certified rework technicians — we ensure every circuit board meets the highest standards of reliability and performance.
+                At Aeroscan Technologies, we provide comprehensive SMT (Surface Mount Technology), DIP (Through-Hole), and Aerial drone product assembly services. Equipped with high-speed automated pick &amp; place machines, multi-zone convection reflow ovens, automated wave soldering tunnels, 3D AOI &amp; X-ray inspection systems, and IPC-certified rework technicians — we ensure every circuit board and flight product meets the highest standards of reliability and performance.
               </p>
             </div>
             <div className="services-intro__stats reveal-right">
               <div className="intro-stat">
-                <div className="intro-stat__val"><span data-target="12">0</span><span className="intro-stat__suf"></span></div>
+                <div className="intro-stat__val"><span data-target="19">0</span><span className="intro-stat__suf"></span></div>
                 <div className="intro-stat__label">Core Assembly Services</div>
               </div>
               <div className="intro-stat">
@@ -111,10 +112,10 @@ export default function ServicesPage() {
         <div className="container">
           <div className="section-header">
             <div className="section-label">Assembly Services Catalog</div>
-            <h2 className="section-title">SMT &amp; DIP Assembly Capabilities</h2>
+            <h2 className="section-title">SMT, DIP &amp; Aerial Assembly Capabilities</h2>
             <div className="divider divider--center"></div>
             <p className="section-desc">
-              Explore our complete range of SMT (Surface Mount Technology) and DIP (Through-Hole) assembly services, backed by advanced manufacturing automation and rigorous IPC quality standards.
+              Explore our complete range of SMT (Surface Mount Technology), DIP (Through-Hole), and Aerial drone product assembly services, backed by advanced manufacturing automation and rigorous IPC quality standards.
             </p>
 
             {/* CATEGORY FILTER BUTTONS */}
@@ -124,7 +125,7 @@ export default function ServicesPage() {
                 className={`btn ${activeCategory === 'ALL' ? 'btn--primary' : 'btn--outline'}`}
                 style={{ padding: '0.6rem 1.4rem', borderRadius: '30px', fontSize: '0.9rem', fontWeight: 600 }}
               >
-                All Services (12)
+                All Services ({servicesData.length})
               </button>
               <button
                 onClick={() => setActiveCategory('SMT')}
@@ -132,7 +133,7 @@ export default function ServicesPage() {
                 style={{ padding: '0.6rem 1.4rem', borderRadius: '30px', fontSize: '0.9rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
               >
                 <Cpu size={16} />
-                SMT Services (6)
+                SMT Services ({smtServices.length})
               </button>
               <button
                 onClick={() => setActiveCategory('DIP')}
@@ -140,7 +141,15 @@ export default function ServicesPage() {
                 style={{ padding: '0.6rem 1.4rem', borderRadius: '30px', fontSize: '0.9rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
               >
                 <Layers size={16} />
-                DIP Services (6)
+                DIP Services ({dipServices.length})
+              </button>
+              <button
+                onClick={() => setActiveCategory('Aerial')}
+                className={`btn ${activeCategory === 'Aerial' ? 'btn--primary' : 'btn--outline'}`}
+                style={{ padding: '0.6rem 1.4rem', borderRadius: '30px', fontSize: '0.9rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              >
+                <Rocket size={16} />
+                Aerial Services ({aerialServices.length})
               </button>
             </div>
           </div>
@@ -218,6 +227,43 @@ export default function ServicesPage() {
               </div>
             </div>
           )}
+
+          {/* AERIAL / DRONE PRODUCTS SECTION (when ALL or Aerial selected) */}
+          {(activeCategory === 'ALL' || activeCategory === 'Aerial') && (
+            <div style={{ marginTop: activeCategory === 'ALL' ? '4rem' : '1rem' }}>
+              {activeCategory === 'ALL' && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.75rem', borderBottom: '2px solid rgba(14, 165, 233, 0.2)', paddingBottom: '0.75rem' }}>
+                  <Rocket size={24} style={{ color: 'var(--clr-primary)' }} />
+                  <h3 style={{ fontSize: '1.6rem', fontWeight: 700, margin: 0, color: '#ffffff' }}>
+                    Aerial — Drone Product Assembly Services
+                  </h3>
+                </div>
+              )}
+
+              <div className="svc-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
+                {aerialServices.map((svc, idx) => (
+                  <article key={svc.id} className="svc-item reveal-up" style={{ '--delay': `${idx * 0.06}s`, backgroundColor: 'var(--clr-surface)', borderRadius: 'var(--radius-md)', padding: '1.25rem', border: '1px solid var(--clr-border)', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}>
+                    <div className="svc-card__img-wrap" style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1rem', height: '190px' }}>
+                      <img src={svc.img} alt={svc.title} className="svc-card__img" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--clr-accent)', backgroundColor: 'rgba(56, 189, 248, 0.1)', padding: '0.2rem 0.6rem', borderRadius: '12px', textTransform: 'uppercase' }}>
+                        {svc.category} Product
+                      </span>
+                      <span className="svc-item__num" style={{ fontSize: '0.85rem', fontWeight: 600, color: '#94a3b8' }}>{svc.num}</span>
+                    </div>
+                    <h3 className="svc-item__title" style={{ fontSize: '1.25rem', fontWeight: 700, margin: '0.25rem 0 0.5rem', color: '#ffffff' }}>{svc.title}</h3>
+                    <p className="svc-item__desc" style={{ fontSize: '0.925rem', color: '#cbd5e1', lineHeight: 1.6, flexGrow: 1, marginBottom: '1.25rem' }}>{svc.desc}</p>
+
+                    <Link to={svc.link} className="btn btn--primary btn--sm" style={{ width: '100%', justifyContent: 'center', gap: '0.5rem', borderRadius: '8px' }}>
+                      Learn Service Details
+                      <ArrowRight size={16} />
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -226,10 +272,10 @@ export default function ServicesPage() {
         <div className="container">
           <div className="section-header">
             <div className="section-label section-label--light">Manufacturing Advantage</div>
-            <h2 className="section-title section-title--light">Why Choose Our SMT &amp; DIP Services</h2>
+            <h2 className="section-title section-title--light">Why Choose Our SMT, DIP &amp; Aerial Services</h2>
             <div className="divider divider--light divider--center"></div>
             <p className="section-desc section-desc--light">
-              Key engineering strengths that make Aeroscan Technologies your trusted manufacturing partner for Surface Mount (SMT) and Through-Hole (DIP) assembly.
+              Key engineering strengths that make Aeroscan Technologies your trusted manufacturing partner for Surface Mount (SMT), Through-Hole (DIP), and Aerial drone product assembly.
             </p>
           </div>
 
@@ -318,7 +364,7 @@ export default function ServicesPage() {
       {/* CTA BANNER */}
       <div className="cta-banner" id="services-cta">
         <div className="container">
-          <h2 className="cta-banner__title">Ready to Start Your SMT or DIP PCB Project?</h2>
+          <h2 className="cta-banner__title">Ready to Start Your SMT, DIP or Aerial PCB Project?</h2>
           <p className="cta-banner__desc">Submit your Gerber files or component list today for a detailed quotation within 2 business hours.</p>
           <div className="cta-banner__actions">
             <Link to="/contact.html" className="btn btn--primary btn--lg">Get a Free Quote</Link>

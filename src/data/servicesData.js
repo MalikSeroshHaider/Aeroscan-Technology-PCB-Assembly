@@ -374,5 +374,203 @@ export const servicesData = [
       { num: "03", title: "Ready for Immediate Integration", text: "Clean, fully tested boards arrive ready for instant installation or retail sale.", icon: CheckCircle2 },
       { num: "04", title: "Complete Documentation", text: "Inspection certificate of conformance (CoC) and test logs included.", icon: FileCode }
     ]
+  },
+
+  // AERIAL / DRONE PRODUCTS
+  {
+    id: "flight-controller-assembly",
+    category: "Aerial",
+    num: "ARL — 01",
+    title: "Flight Controller Assembly",
+    titleSpan: "Avionics",
+    model: "FTFC003v2",
+    desc: "Precision SMT assembly and functional calibration of flight controller (FC) boards with high-density MCU, gyro/IMU, and power management circuitry for drones and UAVs.",
+    img: "/assets/Flight%20Controller.jpg",
+    link: "/flight-controller-assembly.html",
+    highlights: ["High-Density MCU & IMU Placement", "Fine-Pitch BGA & QFN Soldering", "Firmware Programming & Calibration"],
+    story: [
+      "Aeroscan Technologies assembles high-density flight controller (FC) boards for unmanned aerial systems, built to fit 7\", 10\", 13\", and 15\" frame sizes. Each board integrates MCUs, 6-axis IMUs, barometers, and telemetry radios on multilayer PCBs with fine-pitch components.",
+      "Every flight controller is precision-assembled via automated SMT placement and nitrogen reflow, then goes through firmware flashing, gyroscope calibration, and full functional testing before it's cleared for flight."
+    ],
+    features: [
+      { title: "High-Density SMT Placement", text: "Automated placement of MCUs, MEMS IMU, and passive arrays down to 01005 size.", icon: Cpu },
+      { title: "BGA & QFN Fine-Pitch Soldering", text: "Ultra-fine pitch BGA and leadless QFN soldering under controlled nitrogen reflow.", icon: Layers },
+      { title: "Telemetry & RF Integration", text: "Precision soldering of RF modules, antennas, and FPV video transmission stages.", icon: Wifi },
+      { title: "Firmware Programming & Calibration", text: "Bootloader flashing, IMU calibration, and ESC signal verification on bench testers.", icon: Activity }
+    ],
+    benefits: [
+      { num: "01", title: "Crash-Proof Joint Reliability", text: "AOI-verified solder joints that withstand the vibration and thermal cycling of flight.", icon: ShieldCheck },
+      { num: "02", title: "Ultra-Compact Board Density", text: "Fits more processing power into tight 20x20 mm and 30x30 mm FC footprints.", icon: Maximize2 },
+      { num: "03", title: "Pre-Tested & Ready to Fly", text: "Calibrated gyro, accelerometer, and barometer readings before dispatch.", icon: CheckCircle2 },
+      { num: "04", title: "Rapid Prototype Turnaround", text: "Fast assembly of prototype FC boards for R&D and racing drone teams.", icon: Clock }
+    ]
+  },
+  {
+    id: "esc-assembly",
+    category: "Aerial",
+    num: "ARL — 02",
+    title: "ESC Assembly",
+    titleSpan: "Power",
+    model: "Raptor5 G2 4in1 ESC",
+    desc: "Specialized assembly of high-current Electronic Speed Controller (ESC) boards with power MOSFETs, gate drivers, and heavy copper traces for multirotor and fixed-wing aircraft.",
+    img: "/assets/ESC1.jpg",
+    link: "/esc-assembly.html",
+    highlights: ["High-Current Motor Drive Boards", "MOSFET & Heatsink Mounting", "Firmware Flashing & Bench Test"],
+    story: [
+      "Aeroscan Technologies assembles Electronic Speed Controller (ESC) boards built for robust power handling, featuring heavy-copper 2oz\u20136oz traces, high-current MOSFETs, and low-ESR capacitors rated for continuous 20A\u201380A+ loads.",
+      "Each board is precision-assembled with automated SMT placement and reinforced hand soldering of motor wires and connectors, then goes through firmware flashing, load testing, and signal verification before delivery."
+    ],
+    features: [
+      { title: "Heavy-Copper Power Boards", text: "2oz–6oz copper trace boards built for extreme continuous current handling.", icon: Flame },
+      { title: "MOSFET & Gate Driver Assembly", text: "Precision placement of power MOSFETs, gate drivers, and bootstrap circuits.", icon: Zap },
+      { title: "High-Amp Connector Soldering", text: "Robust hand soldering of thick bullet, XT60, and battery connectors.", icon: Wrench },
+      { title: "Firmware & Bench Load Testing", text: "BLHeli firmware flashing, motor commutation tests, and thermal validation.", icon: Activity }
+    ],
+    benefits: [
+      { num: "01", title: "Handles Extreme Current", text: "Optimized trace width and MOSFET cooling prevent thermal runaway.", icon: Thermometer },
+      { num: "02", title: "Smooth Motor Response", text: "Clean DShot/PWM wiring yields glitch-free, precise throttle signals.", icon: Gauge },
+      { num: "03", title: "Enhanced Heat Dissipation", text: "Thermal pad and heatsink mounting for extended high-load flight.", icon: ShieldAlert },
+      { num: "04", title: "Fully Bench Tested", text: "Load-tested under real propellers to guarantee reliable power delivery.", icon: CheckCircle2 }
+    ]
+  },
+  {
+    id: "drone-frame-manufacturing",
+    category: "Aerial",
+    num: "ARL — 03",
+    title: "Drone Frame Manufacturing",
+    titleSpan: "Platforms",
+    model: "Aerial Platforms",
+    desc: "Complete drone frame platform manufacturing integrating carbon fiber structures, power distribution boards, motor mounts, and wiring harnesses into flight-ready airframes.",
+    img: "/assets/frame1.jpg",
+    link: "/drone-frame-manufacturing.html",
+    highlights: ["Carbon Fiber Platform Assembly", "Integrated PDB Power Distribution", "Motor Mount & Arm Rigging"],
+    story: [
+      "Aeroscan Technologies manufactures complete airframe platforms in 7\", 10\", 13\", and 15\" sizes, using carbon fiber and aluminum construction for arms, plates, motor mounts, landing gear, and camera gimbals — built into precise, vibration-isolated platforms.",
+      "Each frame integrates a power distribution board and neatly routed signal wiring in ESD-safe looms, then goes through symmetry, motor-mount, and torque checks to ensure a rigid platform ready for FC, ESC, and propulsion installation."
+    ],
+    features: [
+      { title: "Carbon Fiber Assembly", text: "Precision assembly of brushed CFRP arms, core plates, and side panels.", icon: Layers },
+      { title: "Power Distribution Integration", text: "Soldered PDB, XT60 harness, and filtered LC power for clean video feed.", icon: BatteryCharging },
+      { title: "Motor Mount & Arm Rigging", text: "Torque-checked motor mounts with locking hardware and vibration dampeners.", icon: Wrench },
+      { title: "Cable Routing & Strain Relief", text: "Loomed ESC/FC wiring routed safely with strain relief at all flex points.", icon: Boxes }
+    ],
+    benefits: [
+      { num: "01", title: "Flight-Ready Airframe", text: "Symmetrical, torque-spec'd frame assembly built for stable flight.", icon: CheckCircle2 },
+      { num: "02", title: "Clean Power & Video", text: "Integrated filtering eliminates motor noise from FPV feeds.", icon: Zap },
+      { num: "03", title: "Impact-Resistant Construction", text: "Vibration-isolated mounts protect FC and ESC from crash shocks.", icon: ShieldAlert },
+      { num: "04", title: "Custom Build Configurations", text: "Custom frame sizing, stack mounts, and payload bay layouts on request.", icon: Settings }
+    ]
+  },
+  {
+    id: "aerial-camera-assembly",
+    category: "Aerial",
+    num: "ARL — 04",
+    title: "Aerial Camera Assembly",
+    titleSpan: "Imaging",
+    model: "MS-1800",
+    desc: "Precision assembly of FPV and gimbal camera systems featuring ultra-sensitive image sensors, stabilized mounts, and clean video output for aerial cinematography.",
+    img: "/assets/camera.jpg",
+    link: "/aerial-camera-assembly.html",
+    highlights: ["Image Sensor & Lens Mounting", "Gimbal Stabilization Build", "Clean Analog & Digital Video Out"],
+    story: [
+      "Aeroscan Technologies builds FPV and gimbal camera systems, mounting image sensors, lens barrels, and video processing boards with ESD-safe, dust-free precision handling.",
+      "Each camera undergoes fine-pitch soldering of flex cables to the flight controller stack, then bench calibration for focus, white balance, and interference-free video output before delivery."
+    ],
+    features: [
+      { title: "Image Sensor Mounting", text: "ESD-safe, particulate-free assembly of sensitive CMOS/CCD image sensors.", icon: Eye },
+      { title: "Lens & Filter Calibration", text: "Precision lens barrel fitting with IR-cut and ND filter alignment.", icon: Target },
+      { title: "Gimbal Stabilization Build", text: "Brushless gimbal wiring with vibration-isolated, balanced camera platforms.", icon: Gauge },
+      { title: "Clean Video Output", text: "Shielded analog/digital video lines delivering crystal-clear FPV feed.", icon: Wifi }
+    ],
+    benefits: [
+      { num: "01", title: "Sensor-Safe Assembly", text: "Rigorous ESD and cleanroom handling protects delicate image sensors.", icon: ShieldCheck },
+      { num: "02", title: "Factory-Calibrated Optics", text: "Focus and alignment verified on test charts before dispatch.", icon: CheckCircle2 },
+      { num: "03", title: "Jello-Free Footage", text: "Balanced gimbal integration eliminates vibration artifacts in video.", icon: Sparkles },
+      { num: "04", title: "Custom Mount Solutions", text: "Custom camera stack mounts adapted to any frame geometry.", icon: Wrench }
+    ]
+  },
+  {
+    id: "brushless-motor-assembly",
+    category: "Aerial",
+    num: "ARL — 05",
+    title: "Brushless Motor Assembly",
+    titleSpan: "Propulsion",
+    model: "Drone Motors",
+    desc: "Complete assembly and balancing of brushless DC motors — stator winding, magnetic rotor seating, bearing press-fit, and dynamic thrust balancing.",
+    img: "/assets/Motor1.jpg",
+    link: "/brushless-motor-assembly.html",
+    highlights: ["Stator Winding & Coating", "Rotor Magnet Installation", "Dynamic Thrust Balancing"],
+    story: [
+      "Aeroscan Technologies assembles high-performance brushless motors for FPV quads and fixed-wing aircraft, compatible with 7\", 10\", 13\", and 15\" builds. Our process covers precision stator winding, rotor magnet seating, and press-fit bearing installation.",
+      "Each motor undergoes dynamic balancing and thrust testing for smooth, vibration-free rotation, then finished with high-temperature wire and protective conformal-coated windings for high-current duty."
+    ],
+    features: [
+      { title: "Precision Stator Winding", text: "Machine-wound stator coils built with high-temperature enamel wire.", icon: Flame },
+      { title: "Rotor Magnet Seating", text: "High-grade rare-earth magnet seating with precision rotor balancing.", icon: Cpu },
+      { title: "Bearing Press-Fit", text: "Smooth ABEC-rated bearing seating for zero-wobble shaft rotation.", icon: Wrench },
+      { title: "Dynamic Balancing & Thrust Test", text: "Computerized thrust stand and vibration analysis on every unit.", icon: Gauge }
+    ],
+    benefits: [
+      { num: "01", title: "Zero-Vibration Operation", text: "Dynamically balanced rotors minimize vibration for stable footage and flight.", icon: CheckCircle2 },
+      { num: "02", title: "Max Thrust Output", text: "Optimized windings deliver best-in-class thrust-to-weight efficiency.", icon: Zap },
+      { num: "03", title: "Extended Motor Life", text: "Thermal-protected windings and sealed bearings endure high duty cycles.", icon: ShieldAlert },
+      { num: "04", title: "Universal Mount Compatibility", text: "Standardized 22xx, 28xx, and custom mounting patterns available.", icon: Layers }
+    ]
+  },
+  {
+    id: "propeller-manufacturing",
+    category: "Aerial",
+    num: "ARL — 06",
+    title: "Propeller Manufacturing",
+    titleSpan: "Precision",
+    model: "15X7X2",
+    desc: "Manufacturing and precision balancing of drone propellers — molded blade trimming, hub seating, and dynamic balance certification for smooth, efficient thrust.",
+    img: "/assets/Propeller.jpg",
+    link: "/propeller-manufacturing.html",
+    highlights: ["Molded Blade Trimming", "Precision Hub Mounting", "Dynamic Balance Certification"],
+    story: [
+      "Aeroscan Technologies manufactures and finishes propellers for 7\", 10\", 13\", and 15\" builds, performing molded blade trimming, grit-flow polishing, and hub bore seating to exacting tolerances.",
+      "Every prop is dynamically balanced for blade pitch, weight symmetry, and rotational vibration, then packed as matched blade sets with torque-spec mounting hardware, ready for installation."
+    ],
+    features: [
+      { title: "CNC Blade Finishing", text: "CNC trimming and polishing of injection-molded or carbon fiber blades.", icon: Settings },
+      { title: "Hub Bore Seating", text: "Precision hub boring and press-fit for zero-slop motor mounting.", icon: Wrench },
+      { title: "Pitch & Symmetry Check", text: "Both blades matched for identical pitch, weight, and stiffness.", icon: Target },
+      { title: "Dynamic Balancing Test", text: "High-RPM vibration certification on a dynamic propeller balancer.", icon: Gauge }
+    ],
+    benefits: [
+      { num: "01", title: "Smooth High-RPM Flight", text: "Balanced props eliminate jello, flutter, and mechanical vibration.", icon: CheckCircle2 },
+      { num: "02", title: "Increased Efficiency", text: "Clean blade geometry delivers maximum thrust with lower amp draw.", icon: TrendingUp },
+      { num: "03", title: "Ready-to-Fit Sets", text: "Matched pairs with mounting hardware packaged for immediate use.", icon: Boxes },
+      { num: "04", title: "Custom Pitch Options", text: "Custom blade sizing and pitch profiles engineered on request.", icon: Settings }
+    ]
+  },
+  {
+    id: "vtx-assembly",
+    category: "Aerial",
+    num: "ARL — 07",
+    title: "Video Transmitter Assembly",
+    titleSpan: "RF",
+    model: "5.8GHz 3W FPV Video Transmitter",
+    desc: "Specialized assembly and RF testing of video transmitters (VTX) featuring power amplifiers, frequency synthesizers, and clean antenna-matched RF output.",
+    img: "/assets/VTX1.jpg",
+    link: "/vtx-assembly.html",
+    highlights: ["RF Power Amplifier Build", "Multi-Band Frequency Setup", "Antenna VSWR Matching"],
+    story: [
+      "Aeroscan Technologies assembles VTX boards for live FPV feeds, precision-placing RF power amplifiers, frequency synthesizers, and video controller ICs with controlled-impedance soldering and conformal coating.",
+      "Each VTX is power-cycled and tested on a spectrum analyzer for frequency accuracy, output power, and signal integrity before dispatch."
+    ],
+    features: [
+      { title: "RF Amplifier Assembly", text: "Precision placement of RF PA, SAW filters, and synthesizer ICs.", icon: RadioTower },
+      { title: "Shielded RF Section Build", text: "Soldered RF shielding cans preventing interference and desense.", icon: ShieldCheck },
+      { title: "Multi-Band Frequency Setup", text: "25mW–1W power configs across 5.8GHz, 2.4GHz, and 1.2GHz bands.", icon: Radio },
+      { title: "Spectrum Analyzer Testing", text: "Output power, band accuracy, and VSWR verified on every unit.", icon: Activity }
+    ],
+    benefits: [
+      { num: "01", title: "Long-Range Signal", text: "Clean RF output delivers maximum range and video clarity.", icon: Wifi },
+      { num: "02", title: "Interference-Free Feed", text: "Correctly shielded build eliminates motor-noise video lines.", icon: ShieldAlert },
+      { num: "03", title: "Legal Power Compliance", text: "Output tuned to your region's legal transmission limits.", icon: Award },
+      { num: "04", title: "Plug-and-Play Mounting", text: "Standoff and antenna-ready designs fitting any quad frame.", icon: Wrench }
+    ]
   }
 ];

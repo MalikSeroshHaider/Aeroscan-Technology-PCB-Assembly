@@ -91,6 +91,22 @@ export default function App() {
         <Route path="/final-inspection-packaging" element={<ServiceDetailPage serviceId="final-inspection-packaging" />} />
         <Route path="/final-inspection-packaging.html" element={<ServiceDetailPage serviceId="final-inspection-packaging" />} />
 
+        {/* Aerial / Drone Product Routes */}
+        <Route path="/flight-controller-assembly" element={<ServiceDetailPage serviceId="flight-controller-assembly" />} />
+        <Route path="/flight-controller-assembly.html" element={<ServiceDetailPage serviceId="flight-controller-assembly" />} />
+        <Route path="/esc-assembly" element={<ServiceDetailPage serviceId="esc-assembly" />} />
+        <Route path="/esc-assembly.html" element={<ServiceDetailPage serviceId="esc-assembly" />} />
+        <Route path="/drone-frame-manufacturing" element={<ServiceDetailPage serviceId="drone-frame-manufacturing" />} />
+        <Route path="/drone-frame-manufacturing.html" element={<ServiceDetailPage serviceId="drone-frame-manufacturing" />} />
+        <Route path="/aerial-camera-assembly" element={<ServiceDetailPage serviceId="aerial-camera-assembly" />} />
+        <Route path="/aerial-camera-assembly.html" element={<ServiceDetailPage serviceId="aerial-camera-assembly" />} />
+        <Route path="/brushless-motor-assembly" element={<ServiceDetailPage serviceId="brushless-motor-assembly" />} />
+        <Route path="/brushless-motor-assembly.html" element={<ServiceDetailPage serviceId="brushless-motor-assembly" />} />
+        <Route path="/propeller-manufacturing" element={<ServiceDetailPage serviceId="propeller-manufacturing" />} />
+        <Route path="/propeller-manufacturing.html" element={<ServiceDetailPage serviceId="propeller-manufacturing" />} />
+        <Route path="/vtx-assembly" element={<ServiceDetailPage serviceId="vtx-assembly" />} />
+        <Route path="/vtx-assembly.html" element={<ServiceDetailPage serviceId="vtx-assembly" />} />
+
         {/* Legacy & Additional Service Routes */}
         <Route path="/pcb-assembly" element={<ServiceDetailPage serviceId="smt-pcb-assembly" />} />
         <Route path="/pcb-assembly.html" element={<ServiceDetailPage serviceId="smt-pcb-assembly" />} />

@@ -92,6 +92,7 @@ export default function ServiceDetailPage({ serviceId }) {
         <div className="container page-banner__content">
           <span className="page-banner__label">{data.num} — {data.category} Service</span>
           <h1 className="page-banner__title">{data.title} <span>{data.titleSpan || ''}</span></h1>
+          {data.model && <p className="page-banner__model" style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--clr-accent)', margin: '0.25rem 0 0.75rem', letterSpacing: '0.02em' }}>Model: {data.model}</p>}
           <p className="page-banner__desc">{data.desc}</p>
         </div>
       </section>
